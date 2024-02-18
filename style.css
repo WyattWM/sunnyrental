@@ -4,10 +4,26 @@
     box-sizing: border-box;
   }
   
+  body {
+    background-image: url("images/homepage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100vh;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    body {
+      background-image: url("images/landingmobile.jpg");
+    }
+  }
+  
   html {
     font-size: 62.5%;
     font-family: "Open Sans", sans-serif;
   }
+  
+  /* Nav */
   
   li {
     list-style: none;
@@ -18,7 +34,7 @@
   }
   
   .header {
-    background-color: rgba(122, 122, 123, 0.65);
+    z-index: 100;
   }
   
   .navbar {
@@ -39,13 +55,14 @@
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #101010;
+    background-color: #ffffff;
   }
   
   .nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 20vh;
   }
   
   .nav-item {
@@ -55,19 +72,13 @@
   .nav-link {
     font-size: 1.6rem;
     font-weight: 400;
-    color: #475569;
+    color: #ffffff;
   }
   
   .nav-link:hover {
     color: #482ff7;
   }
   
-  .nav-logo {
-    font-size: 2.1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #482ff7;
-  }
   
   @media only screen and (max-width: 768px) {
     .nav-menu {
@@ -108,4 +119,48 @@
       transform: translateY(-8px) rotate(-45deg);
     }
   }
-  
+
+
+/* Landing Section */
+
+.container {
+  display: flex;
+}
+
+.blur-box {
+  width: 50%;
+  height: 96.3vh;
+  background: rgba(0, 0, 0, 0.397);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.2px);
+  -webkit-backdrop-filter: blur(6.2px);
+}
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-left: 20vh;
+  margin-top: 20vh;
+}
+
+.title {
+  color: white;
+  font-size: 3.25rem;
+  width: 18vh;
+  text-align: justify;
+  margin-left: 20vh;
+}
+
+.title-container {
+  margin-top: 20vh;
+}
+
+
+/* Stats Section */
+
+.stats {
+  background-color: white;
+  height: 30vh;
+}
